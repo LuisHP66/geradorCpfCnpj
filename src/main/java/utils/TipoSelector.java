@@ -4,5 +4,6 @@ public enum TipoSelector {
 
     CPF,
     CNPJ,
-    NAME;
+    NAME,
+    GTIN,
 }

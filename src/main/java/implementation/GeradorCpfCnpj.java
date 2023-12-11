@@ -1,9 +1,6 @@
 package implementation;
 
-import utils.RandomName;
-import utils.TipoSelector;
-import utils.RandomCNPJ;
-import utils.RandomCPF;
+import utils.*;
 
 public interface GeradorCpfCnpj {
 
@@ -12,7 +9,8 @@ public interface GeradorCpfCnpj {
             case CNPJ -> new RandomCNPJ().generationCnpj();
             case CPF -> new RandomCPF().generationCPF();
             case NAME -> new RandomName().generationName();
-            default -> throw new RuntimeException("Metodo não implementado");
+            case GTIN -> new RandomCodigoGtin().gerarGtin13();
+            default -> throw new RuntimeException("Método não implementado");
         };
     }
 }
